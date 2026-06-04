@@ -32,7 +32,7 @@
           "wall_clock_s": 0.0
         }
       ],
-      "phase": "REVIEW",
+      "phase": "DONE",
       "reject_count": 0
     },
     "M0.5": {
@@ -67,11 +67,11 @@
           "wall_clock_s": 0.0
         }
       ],
-      "phase": "REVIEW",
+      "phase": "DONE",
       "reject_count": 0
     }
   },
   "repo": "graphed-corpus",
   "schema_version": 1,
-  "updated_at": "2026-06-04T17:15:21Z"
+  "updated_at": "2026-06-04T17:20:28Z"
 }
