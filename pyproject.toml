@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "graphed-corpus"
+version = "0.0.1"
+description = "Required Operations Catalog + runnable Canonical Analyses fixtures (M0.5) for graphed"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "graphed-org" }]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = ["awkward>=2.6", "hist>=2.7", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "coverage[toml]", "hypothesis", "mypy", "ruff"]
+docs = ["sphinx", "furo", "myst-parser"]
+
+[project.urls]
+Homepage = "https://github.com/graphed-org/graphed-corpus"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/graphed_corpus"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests/frozen/m05"]
+addopts = "-q"
+
+[tool.coverage.run]
+branch = true
+source = ["graphed_corpus"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.ruff]
+line-length = 110
+src = ["src", "tests", "scripts"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]
+
+# awkward/hist are dynamically typed at the array level. hist ships partial stubs whose generic
+# BaseHist/Hist split fights --strict; treat both as untyped at the boundary (documented friction,
+# not a type:ignore flood). Our own signatures stay annotated and checked.
+[[tool.mypy.overrides]]
+module = ["awkward.*", "hist.*"]
+ignore_missing_imports = true
+follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+module = ["graphed_corpus.analyses.*", "graphed_corpus.dataset", "graphed_corpus.histograms"]
+warn_return_any = false

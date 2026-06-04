@@ -1,38 +1,77 @@
 {
-  "schema_version": 1,
-  "repo": "graphed-corpus",
-  "updated_at": "2026-06-04T15:08:26Z",
-  "scaffolding": {"claude_md": true, "readme": true, "m0_spine": false},
-  "note": "M0.5 is a decompose/strong-model milestone: documents + runnable fixtures, no framework code. Coverage/benchmark gates are N/A; the gate is reviewer sign-off that the Catalog and fixtures are faithful and runnable.",
   "milestones": {
     "M0": {
-      "title": "Repository spine (dev tooling, test harness wiring, Sphinx, CONTRIBUTING)",
-      "phase": "PENDING",
-      "freeze_tag": null,
-      "budget": {"iterations_cap": 8, "iteration_index": 0, "tokens_spent": 0, "wall_clock_s": 0},
-      "gates": {"frozen_tests": null, "coverage": null, "lint": null, "types": null, "determinism": null, "benchmark": null, "integrity_scan": null},
-      "metrics": {"pass_count": 0, "fail_set_hash": null, "tree_hash": null, "diff_lines": 0},
-      "reviewer": {"status": null, "reject_count": 0},
-      "attempts_log": null,
+      "dispute_count": 0,
+      "escalated": false,
+      "freeze_tag": "freeze-M0-0",
+      "gates": {
+        "benchmark": null,
+        "coverage": true,
+        "determinism": true,
+        "frozen_tests": true,
+        "integrity_scan": true,
+        "lint": true,
+        "types": true
+      },
       "incident": null,
-      "disputes": []
+      "l0_count": 0,
+      "metrics_history": [
+        {
+          "benchmark_ok": null,
+          "coverage_ok": true,
+          "determinism_ok": true,
+          "diff_lines": 0,
+          "fail_set_hash": "e3b0c44298fc1c14",
+          "integrity_ok": true,
+          "iteration_index": 0,
+          "lint_ok": true,
+          "pass_count": 60,
+          "tokens_spent": 0,
+          "tree_hash": "local",
+          "types_ok": true,
+          "wall_clock_s": 0.0
+        }
+      ],
+      "phase": "REVIEW",
+      "reject_count": 0
     },
     "M0.5": {
-      "title": "Required Operations Catalog + Canonical Analyses fixtures + reference histograms + graph-bloat note",
-      "phase": "PENDING",
-      "freeze_tag": null,
-      "budget": {"iterations_cap": 6, "iteration_index": 0, "tokens_spent": 0, "wall_clock_s": 0},
-      "gates": {"frozen_tests": null, "coverage": "N/A", "lint": null, "types": null, "determinism": null, "benchmark": "N/A", "integrity_scan": null},
-      "deliverables": {
-        "ops_catalog": {"path": "docs/requirements/ops_catalog.md", "done": false},
-        "canonical_analyses": {"path": "tests/corpus/", "items": ["adl_q1_8", "agc_ttbar_slice", "ttgamma_slice"], "done": false},
-        "reference_histograms": {"done": false},
-        "graph_bloat_note": {"done": false}
+      "dispute_count": 0,
+      "escalated": false,
+      "freeze_tag": "freeze-M0.5-0",
+      "gates": {
+        "benchmark": null,
+        "coverage": true,
+        "determinism": true,
+        "frozen_tests": true,
+        "integrity_scan": true,
+        "lint": true,
+        "types": true
       },
-      "reviewer": {"status": null, "reject_count": 0},
-      "attempts_log": null,
       "incident": null,
-      "disputes": []
+      "l0_count": 0,
+      "metrics_history": [
+        {
+          "benchmark_ok": null,
+          "coverage_ok": true,
+          "determinism_ok": true,
+          "diff_lines": 0,
+          "fail_set_hash": "e3b0c44298fc1c14",
+          "integrity_ok": true,
+          "iteration_index": 0,
+          "lint_ok": true,
+          "pass_count": 60,
+          "tokens_spent": 0,
+          "tree_hash": "local",
+          "types_ok": true,
+          "wall_clock_s": 0.0
+        }
+      ],
+      "phase": "REVIEW",
+      "reject_count": 0
     }
-  }
+  },
+  "repo": "graphed-corpus",
+  "schema_version": 1,
+  "updated_at": "2026-06-04T17:15:21Z"
 }
