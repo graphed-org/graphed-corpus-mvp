@@ -3,7 +3,7 @@
 Ground-truth **requirements + runnable canonical-analysis fixtures** for `graphed` (milestone
 M0.5), distilled from the A.8 reference corpus. Part of the
 [`graphed-org`](https://github.com/graphed-org) project; see
-[`graphed-project`](https://github.com/graphed-org/graphed-project) for root guidance and the plan.
+[`graphed-project`](https://github.com/graphed-org/graphed-project-mvp) for root guidance and the plan.
 
 ## What's here
 

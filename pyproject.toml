@@ -23,7 +23,7 @@ dev = ["pytest", "pytest-cov", "coverage[toml]", "hypothesis", "mypy", "ruff"]
 docs = ["sphinx", "furo", "myst-parser"]
 
 [project.urls]
-Homepage = "https://github.com/graphed-org/graphed-corpus"
+Homepage = "https://github.com/graphed-org/graphed-corpus-mvp"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/graphed_corpus"]
